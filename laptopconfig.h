@@ -65,7 +65,7 @@ static const struct arg args[] = {
 	{ netspeed_tx,   "%s ",      "wlps2s0" },
 	{ netspeed_rx,   "%s ",      "wlp2s0"  },
 	{ battery_state, "%s",        "BAT0"    },
-	{ battery_perc,  "%s ",      "BAT0"    },
+	{ battery_perc,  "%s  ",      "BAT0"    },
 	{ cpu_perc,      "%s%% ",      NULL     },
 	{ ram_used,      "%s ",        NULL     },
 	{ keymap,        "%s ",        NULL     },

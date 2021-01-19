@@ -5,9 +5,24 @@ do
 	[ ! -d "$repo" ] && git clone https://git.suckless.org/$repo
 done
 
-cp dwmconfig.h dwm/config.h
-cp laptopconfig.h slstatus/laptopconfig.h
-echo Don\'t forge to symlink/copy the corresponding config for slstatus
-cp desktopconfig.h slstatus/desktopconfig.h
-cp stconfig.h st/config.h
-cp surfconfig.h surf/config.h
+
+ln -s $PWD/dwmconfig.h $PWD/dwm/config.h
+
+echo Which configuration do you want for slstatus
+echo 1 : desktop
+echo 2: laptop
+
+read choice
+
+if [ $choice -eq 1 ]
+then
+	ln -s $PWD/desktopconfig.h $PWDslstatus/config.h
+elif [ $choice -eq 2 ]
+then
+	ln -s $PWD/laptopconfig.h $PWD/slstatus/config.h
+else
+	echo Mettre un message d\'erreur
+fi
+
+ln -s $PWD/stconfig.h $PWD/st/config.h
+ln -s $PWD/surfconfig.h $PWD/surf/config.h
