@@ -33,6 +33,7 @@ static const Rule rules[] = {
 	{ "Engrampa",      NULL,       NULL,       0,            1,           -1 },
 	{ "mpv",           NULL,       NULL,       0,            1,           -1 },
 	{ "Pavucontrol",   NULL,       NULL,       0,            1,           -1 },
+	{ "Qemu-system-x86_64",          NULL,       NULL,       0,            1,           -1 },
 };
 
 /* layout(s) */
